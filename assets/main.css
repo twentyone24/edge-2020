@@ -54,6 +54,7 @@ a {
     color: #710071;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
+    padding: 0px 10px  0px  10px ;
 }
 
 td.navigation {
@@ -66,7 +67,7 @@ td.navigation {
 td.navigation a.current {
     background: #710071;
     /* For browsers that do not support gradients */
-    padding: 10px 0;
+    padding: 0px 10px  0px  10px ;
     text-align: center;
     color: #fff;
     font-family: 'Playfair Display', serif;
@@ -75,18 +76,21 @@ td.navigation a.current {
 
 a.current:hover {
     color: #710071;
+    padding: 0px 10px  0px  10px ;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
 }
 
 a:hover {
     color: #7213b2;
+    padding: 0px 10px  0px  10px ;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
 }
 
 a:active {
     color: #e82945;
+    padding: 0px 10px  0px  10px ;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
 }
@@ -140,9 +144,8 @@ ul {
     text-align: left;
 }
 
-ul li {
-    list-style: none;
-    margin: 0px auto 0px auto;
+li {
+    list-style: disc;
     padding: 0px;
     text-align: left;
 }
@@ -222,12 +225,15 @@ td {
 /* Conference Title Logo */
 
 .title1 {
-    color: #b2132e;
+    color: purple;
+    text-align: center;
     text-shadow: 1px 1px 3px #c0c0c0;
 }
 
 .title2 {
     color: #52739e;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
     text-shadow: 1px 1px 3px #c0c0c0;
 }
 
@@ -317,10 +323,10 @@ td.room {
 
 td.date {
     white-space: nowrap;
-    width: 130px;
+    width: 10px;
     text-align: right;
-    vertical-align: top;
-    padding: 4px 16px 0px 0px;
+    vertical-align: center;
+    padding: 4px 56px 0px 0px;
 }
 
 td.title {
@@ -336,11 +342,11 @@ td.title {
 
 td.title-special {
     padding: 4px 12px 4px 4px;
-    width: 90%;
-    vertical-align: top;
+    width: 100%;
+    vertical-align: center;
     font-size: 1.67em;
     color: #52739e;
-    height: 32px;
+    
     font-family: 'Playfair Display', serif;
     text-shadow: 1px 1px 2px #d0d0d0;
 }
@@ -363,13 +369,9 @@ td.abstract img {
     margin: 4px auto 8px auto
 }
 
-table.plenary {
-    padding-top: 8px;
-    background: #ffffff;
-}
 
 
-/* Registration and Directions iframes and Images */
+/* Registration and Rules iframes and Images */
 
 iframe.registration {
     display: block;
@@ -379,7 +381,7 @@ iframe.registration {
     border: none;
 }
 
-iframe.directions {
+iframe.rules {
     display: block;
     margin: 1em auto 2em auto;
     width: 800px;

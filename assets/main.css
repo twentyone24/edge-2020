@@ -22,6 +22,7 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+
 .font {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
@@ -47,14 +48,15 @@ body {
     font-size: 1em;
     line-height: 1.5em;
     margin: 60px auto;
-    width: 1000px;
+    width: 1200px;
+    overflow-x: hidden;
 }
 
 a {
     color: #710071;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    padding: 0px 10px  0px  10px ;
+    padding: 0px 10px 0px 10px;
 }
 
 td.navigation {
@@ -67,7 +69,7 @@ td.navigation {
 td.navigation a.current {
     background: #710071;
     /* For browsers that do not support gradients */
-    padding: 0px 10px  0px  10px ;
+    padding: 0px 10px 0px 10px;
     text-align: center;
     color: #fff;
     font-family: 'Playfair Display', serif;
@@ -76,21 +78,21 @@ td.navigation a.current {
 
 a.current:hover {
     color: #710071;
-    padding: 0px 10px  0px  10px ;
+    padding: 0px 10px 0px 10px;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
 }
 
 a:hover {
     color: #7213b2;
-    padding: 0px 10px  0px  10px ;
+    padding: 0px 10px 0px 10px;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
 }
 
 a:active {
     color: #e82945;
-    padding: 0px 10px  0px  10px ;
+    padding: 0px 10px 0px 10px;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
 }
@@ -101,7 +103,7 @@ h3,
 h4 {
     clear: left;
     color: #813c54;
-    margin: 1.5em 0em 1em 0em;
+    margin: 1.5em 0em 1em .5em;
     font-family: 'Playfair Display', serif;
     text-shadow: 1px 1px 2px #d0d0d0;
 }
@@ -128,6 +130,7 @@ p {
     padding: 0px;
     width: 900px;
     text-align: left;
+
 }
 
 li a,
@@ -326,7 +329,13 @@ td.date {
     width: 10px;
     text-align: right;
     vertical-align: center;
-    padding: 4px 56px 0px 0px;
+    padding: 4px 56px 0px 20px;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+}
+
+td.date:hover {
+    transform: scale(1.2);
 }
 
 td.title {
@@ -346,7 +355,7 @@ td.title-special {
     vertical-align: center;
     font-size: 1.67em;
     color: #52739e;
-    
+
     font-family: 'Playfair Display', serif;
     text-shadow: 1px 1px 2px #d0d0d0;
 }
@@ -421,31 +430,135 @@ footer {
 }
 
 
+
+
+
+
+.main_container {
+    /* width: 80vw; */
+    width: 100%;
+    gap: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left_container {
+
+    margin: 50px 0px 0px 0px;
+    max-width: 300px;
+    font-size: 15px;
+
+}
+
+.name_heading {
+
+    background-color: #710071;
+    padding: 10px 20px;
+    color: #fafafa;
+    border-radius: 20px;
+
+}
+
+.name_container {}
+
+.names_box {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    /* gap: 5px; */
+
+}
+
+.name_container_container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    /* align-items: center; */
+    margin: 10px 0px 10px 20px;
+}
+
+
+.right_container {}
+
+
+
+
+
+
+
 /* My hacky way of making the site mobile-friendly */
 
 @media only screen and (max-width: 1100px) {
     h2 {
         font-size: 3.00em;
     }
+
+
+
+    td.navigation a.current {
+        /* For browsers that do not support gradients */
+        font-size: 28px;
+    }
+
+
+
     p {
         font-size: 1.5em;
         line-height: 1.5em;
     }
+
     th,
     td,
     tr {
         font-size: 1.5em;
         line-height: 1.5em;
     }
+
     td.date {
         font-size: 1em;
         padding-top: 0.5em;
+        transition: all 250ms ease-in-out;
+        cursor: pointer;
     }
+
+    .date:hover {
+
+        transform: scale(1.5);
+
+    }
+
     td.navigation {
         font-size: 1.5em;
         padding: 0px 20px 0px 20px;
     }
+
     table.footer {
         font-size: 0.33em;
+    }
+
+
+    table.sponsors {
+        width: 100%;
+    }
+
+    .name_heading {
+
+        background-color: #710071;
+        padding: 10px 20px;
+        color: #fafafa;
+        border-radius: 20px;
+        font-size: 13px;
+
+    }
+
+
+
+    footer {
+        font-size: 1em;
+        margin-top: 12em;
+        text-align: center;
     }
 }

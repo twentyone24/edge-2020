@@ -50,7 +50,7 @@ body {
     margin: 60px auto;
     width: 1200px;
     overflow-x: hidden;
-    
+
 }
 
 a {
@@ -538,8 +538,11 @@ footer {
         font-size: 3.00em;
     }
 
-
-
+    .about_para{
+         max-width: 800px;
+         word-break: break-all;
+    } 
+    
     td.navigation a.current {
         /* For browsers that do not support gradients */
         font-size: 28px;
